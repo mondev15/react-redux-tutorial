@@ -1,10 +1,10 @@
-import storyReducer from './story';
+import storyReducer from '../reducers/story';
 
-// --- story reducer
 describe('story reducer', () => {
   it('adds stories to the story state', () => {
+
     const stories = ['a', 'b', 'c'];
- 
+
     const action = {
       type: 'STORIES_ADD',
       stories,
@@ -12,10 +12,9 @@ describe('story reducer', () => {
 
     const previousState = { stories: [], error: null };
     const expectedNewState = { stories, error: null };
+
     const newState = storyReducer(previousState, action);
-    
+
     expect(newState).toEqual(expectedNewState);;
   });
 });
-
-// --- story selector

@@ -2,7 +2,6 @@ import React from 'react';
 import './Story.css';
 import { connect } from 'react-redux';
 import { doArchiveStory } from '../actions/archive';
-import { fetchStories } from '../api/story';
 
 const Story = ({ story, columns, onArchive }) => {
     const {

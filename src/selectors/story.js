@@ -1,16 +1,16 @@
 // ---ES6
 const isNotArchived = archivedIds => story =>
-    archivedIds.indexOf(story.objectID) === -1;
+  archivedIds.indexOf(story.objectID) === -1;
 
 const getReadableStories = ({ storyState, archiveState }) =>
-    storyState.filter(isNotArchived(archiveState));
+  storyState.stories.filter(isNotArchived(archiveState));
 
-    const getFetchError = ({ storyState }) =>
+const getFetchError = ({ storyState }) =>
   storyState.error;
 
 export {
-    getReadableStories,
-    getFetchError
+  getReadableStories,
+  getFetchError
 };
 
 // ---equivalent in javascript
